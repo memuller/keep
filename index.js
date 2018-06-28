@@ -36,6 +36,8 @@ app.on('activate', () => {
 
 app.on('ready', () => {
   mainWindow = createMainWindow(handleResize, handleClosed)
+  mainWindow.setAutoHideMenuBar(true)
+  mainWindow.setMenuBarVisibility(false)
   createMainMenu()
 })
 
